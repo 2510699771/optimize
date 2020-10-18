@@ -9,8 +9,7 @@
 import { createNamespacedHelpers } from 'vuex'
 const userModule = createNamespacedHelpers('user')
 const { mapState: userState, mapActions: userActions } = userModule
-import _ from 'lodash'
-// import echarts from 'echarts'
+import unionBy from 'lodash/unionBy'
 export default {
   name: '',
   props: {

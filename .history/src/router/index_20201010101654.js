@@ -20,10 +20,8 @@ const routes = [
   }
 ]
 
-const isPro = process.env.NODE_ENV === 'procdution'
-
 const router = new VueRouter({
-  mode: isPro ? 'hash' : 'history',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

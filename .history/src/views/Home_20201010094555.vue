@@ -3,6 +3,9 @@
 </template>
 
 <script>
+import {createNamespacedHelpers} from 'vuex'
+const userModule = createNamespacedHelpers('user')
+const {mapState: userState, mapActions: userActions} = userModule
 export default {
   name: '',
   props: {
@@ -16,23 +19,19 @@ export default {
     }
   },
   methods: {
-
+    // ...userActions([])
   },
   mounted() {
-    console.log(111)
+    this.$store.dispatch('', {})
   },
   watch: {
 
   },
-  destroyed() {
-    console.log('组件销毁')
-  },
   computed: {
-
+    ...userState(['name'])
   }
 }
 </script>
 
 <style scoped lang='scss'>
 </style>
-</template>
